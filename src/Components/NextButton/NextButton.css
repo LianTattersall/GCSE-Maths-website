@@ -1,0 +1,21 @@
+.next-button {
+  display: block;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: 2px, solid, #66fcf1;
+  border-radius: 4px;
+  height: 50px;
+  width: 100px;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  transition-property: height, width, font-size;
+  transition-duration: 400ms;
+}
+
+.next-button:hover {
+  height: 60px;
+  width: 120px;
+  font-size: 25px;
+}

@@ -1,0 +1,35 @@
+.home-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1f2833;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.topic {
+  font-size: 30px;
+  transition-property: font-size;
+  transition-duration: 400ms;
+  padding: 10px;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.topic:hover {
+  font-size: 40px;
+}
+
+.home-button {
+  background-color: #1f2833;
+  border: 0px, solid, white;
+}
+
+.home-title {
+  font-size: 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #66fcf1;
+}
