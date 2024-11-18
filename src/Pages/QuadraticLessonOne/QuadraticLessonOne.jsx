@@ -2,8 +2,11 @@ import { MathJax } from "better-react-mathjax";
 import SideBar from "../../Components/SideBar/SideBar";
 import "../Lesson.css";
 import NextButton from "../../Components/NextButton/NextButton";
+import { useContext } from "react";
+import { ShowSideBarContext } from "../../Contexts/ShowSideBar";
 
 function QuadraticLessonOne() {
+  const { showSideBar } = useContext(ShowSideBarContext);
   return (
     <div className="lesson-container">
       <SideBar
@@ -11,7 +14,9 @@ function QuadraticLessonOne() {
         topic={"quadratics"}
         currPath={"/quadratic-lesson-1"}
       ></SideBar>
-      <div className="lesson">
+      <div
+        className={showSideBar ? "lesson-with-margin" : "lesson-full-screen"}
+      >
         <h1 className="lesson-name">Factorising Quadratics</h1>
         <div className="content">
           <MathJax>

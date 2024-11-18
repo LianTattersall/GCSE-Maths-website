@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import SideBar from "../../Components/SideBar/SideBar";
 import { MathJax } from "better-react-mathjax";
 import "./QuadraticExerciseOne.css";
-import FactorTable from "../../Components/FactorTable/FactorTable";
+import { ShowSideBarContext } from "../../Contexts/ShowSideBar";
+import Correct from "../../Components/Correct/Correct";
+import Incorrect from "../../Components/Incorrect/Incorrect";
 import NextButton from "../../Components/NextButton/NextButton";
+import HintQE1 from "../../Components/HintQE1/HintQE1";
 
 function QuadraticExerciseOne() {
   const [root1, setRoot1] = useState(Math.floor(Math.random() * 9));
@@ -12,6 +15,7 @@ function QuadraticExerciseOne() {
   const [input2, setInput2] = useState("");
   const [feedback, setFeedback] = useState(null);
   const [showHint, setShowHint] = useState(false);
+  const { showSideBar } = useContext(ShowSideBarContext);
 
   useEffect(() => {
     const sign1 = Math.random() < 0.5 ? 1 : -1;
@@ -44,30 +48,17 @@ function QuadraticExerciseOne() {
     }
   }
 
-  const correct = (
+  const Answer = (
     <>
-      <p>Correct! Well Done!</p>
-      <button className="button" onClick={handleReset}>
-        New question
-      </button>
-      <NextButton label={"Next"} path={"/quadratic-lesson-2"}></NextButton>
-    </>
-  );
-
-  const incorrect = (
-    <>
-      <p>Not quite! Try again or get a hint!</p>
-      <button className="button" onClick={handleCheck}>
-        Check Answer
-      </button>
+      <MathJax>{`Solution: \\((x + ${root1})(x + ${root2})\\)`}</MathJax>
       <button
+        onClick={handleReset}
         className="button"
-        onClick={() => {
-          setShowHint(true);
-        }}
+        style={{ marginTop: "20px" }}
       >
-        Get hint
+        New Question
       </button>
+      <NextButton label={"Next"} path={"/quadratic-lesson-2"} />
     </>
   );
 
@@ -84,7 +75,9 @@ function QuadraticExerciseOne() {
   return (
     <div className="lesson-container">
       <SideBar topic={"quadratics"} currPath={"/quadratic-exercise-1"} />
-      <div className="lesson">
+      <div
+        className={showSideBar ? "lesson-with-margin" : "lesson-full-screen"}
+      >
         <h1 className="lesson-name">Factorising Practise</h1>
         <div
           className="content"
@@ -124,9 +117,21 @@ function QuadraticExerciseOne() {
               Check Answer
             </button>
           ) : null}
-          {feedback === "correct" ? correct : null}
-          {feedback === "incorrect" ? incorrect : null}
-          <FactorTable root1={root1} root2={root2} showHint={showHint} />
+          {feedback === "correct" ? (
+            <Correct
+              handleReset={handleReset}
+              path={"/quadratic-lesson-2"}
+            ></Correct>
+          ) : null}
+          {feedback === "incorrect" ? (
+            <Incorrect
+              setShowHint={setShowHint}
+              handleCheck={handleCheck}
+              setFeedback={setFeedback}
+            />
+          ) : null}
+          {feedback === "answer" ? Answer : null}
+          <HintQE1 root1={root1} root2={root2} showHint={showHint} />
         </div>
       </div>
     </div>
