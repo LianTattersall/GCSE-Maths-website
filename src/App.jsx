@@ -8,6 +8,9 @@ import QuadraticExerciseOne from "./Pages/QuadraticExerciseOne/QuadraticExercise
 import { ShowSideBarPovider } from "./Contexts/ShowSideBar";
 import QuadraticLessonTwo from "./Pages/QuadraticLessonTwo/QuadraticLessonTwo";
 import QuadraticExerciseTwo from "./Pages/QuadraticExerciseTwo/QuadraticExerciseTwo";
+import RootsLesson from "./Pages/RootsLesson/RootsLesson";
+import QuadraticChallenges from "./Pages/QuadraticChallenges/QuadraticChallenges";
+import QuadraticFormula from "./Pages/QuadraticFormula/QuadraticFormula";
 
 const config = {
   loader: { load: ["[tex]/html"] },
@@ -46,6 +49,15 @@ function App() {
             <Route
               path="/quadratic-exercise-2"
               element={<QuadraticExerciseTwo />}
+            ></Route>
+            <Route path="/roots-lesson" element={<RootsLesson />}></Route>
+            <Route
+              path="/quadratic-challenges"
+              element={<QuadraticChallenges />}
+            ></Route>
+            <Route
+              path="/quadratic-formula"
+              element={<QuadraticFormula />}
             ></Route>
           </Routes>
         </ShowSideBarPovider>

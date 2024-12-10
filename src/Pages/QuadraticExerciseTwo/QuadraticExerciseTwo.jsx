@@ -55,7 +55,6 @@ function QuadraticExerciseTwo() {
   function handleCheck() {
     const answer1 = Number((-bracket1 / bracketx1).toFixed(2));
     const answer2 = Number((-bracket2 / bracketx2).toFixed(2));
-    console.log(answer1, answer2);
     const correctAnswer =
       (Number(input1) === answer1 && Number(input2) === answer2) ||
       (Number(input2) === answer1 && Number(input1) === answer2);
@@ -113,7 +112,7 @@ function QuadraticExerciseTwo() {
 
   return (
     <div className="lesson-container">
-      <SideBar topic={"quadratics"} currPath={"quadratic-exercise-2"} />
+      <SideBar topic={"quadratics"} currPath={"/quadratic-exercise-2"} />
       <div
         className={showSideBar ? "lesson-with-margin" : "lesson-full-screen"}
       >
@@ -173,7 +172,7 @@ function QuadraticExerciseTwo() {
           {feedback === "correct" ? (
             <Correct
               handleReset={handleReset}
-              path={"/quadratic-formula"}
+              path={"/quadratic-challenges"}
             ></Correct>
           ) : null}
           {feedback === "incorrect" ? (

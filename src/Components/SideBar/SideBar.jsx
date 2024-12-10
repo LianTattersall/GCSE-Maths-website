@@ -16,11 +16,14 @@ function SideBar({ topic, currPath }) {
     ],
     [
       { label: "Harder Quadratics Lesson", path: "/quadratic-lesson-2" },
+      { label: "Roots Lesson", path: "/roots-lesson" },
       {
         label: "Harder Quadratics Exercise",
         path: "/quadratic-exercise-2",
       },
+      { label: "Quadratic Challenges", path: "/quadratic-challenges" },
     ],
+    [{ label: "Quadratic Formula Lesson", path: "/quadratic-formula" }],
   ];
 
   useEffect(() => {

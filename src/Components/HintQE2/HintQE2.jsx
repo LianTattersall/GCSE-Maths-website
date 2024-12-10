@@ -42,7 +42,7 @@ function HintQE2({ bracket1, bracket2, bracketx1, bracketx2, showHint }) {
       >
         <MathJax>{`\\(${xSqCoe}a + b\\)`}</MathJax>
         {factorsXSqCoe.map((factor, index) => (
-          <MathJax key={index}>{`\\(${factor[1]}b + ${factor[1]}a\\)`}</MathJax>
+          <MathJax key={index}>{`\\(${factor[0]}b + ${factor[1]}a\\)`}</MathJax>
         ))}
       </div>
       <p></p>

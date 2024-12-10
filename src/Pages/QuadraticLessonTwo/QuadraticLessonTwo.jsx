@@ -85,7 +85,7 @@ function QuadraticLessonTwo() {
             }
           </MathJax>
         </div>
-        <NextButton label={"Next"} path={"/quadratic-exercise-2"}></NextButton>
+        <NextButton label={"Next"} path={"/roots-lesson"}></NextButton>
       </div>
     </div>
   );
