@@ -40,7 +40,7 @@ function HintQE2({ bracket1, bracket2, bracketx1, bracketx2, showHint }) {
           alignItems: "center",
         }}
       >
-        <MathJax>{`\\(${xSqCoe}a + b\\)`}</MathJax>
+        <MathJax>{`\\(${xSqCoe}b + a\\)`}</MathJax>
         {factorsXSqCoe.map((factor, index) => (
           <MathJax key={index}>{`\\(${factor[0]}b + ${factor[1]}a\\)`}</MathJax>
         ))}

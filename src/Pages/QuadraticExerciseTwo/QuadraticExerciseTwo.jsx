@@ -172,7 +172,7 @@ function QuadraticExerciseTwo() {
           {feedback === "correct" ? (
             <Correct
               handleReset={handleReset}
-              path={"/quadratic-challenges"}
+              path={"/quadratic-formula"}
             ></Correct>
           ) : null}
           {feedback === "incorrect" ? (

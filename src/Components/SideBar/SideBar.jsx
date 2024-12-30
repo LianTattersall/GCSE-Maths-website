@@ -21,9 +21,16 @@ function SideBar({ topic, currPath }) {
         label: "Harder Quadratics Exercise",
         path: "/quadratic-exercise-2",
       },
-      { label: "Quadratic Challenges", path: "/quadratic-challenges" },
     ],
-    [{ label: "Quadratic Formula Lesson", path: "/quadratic-formula" }],
+    [
+      { label: "Quadratic Formula Lesson", path: "/quadratic-formula" },
+      { label: "The Discriminant Lesson", path: "/discriminant" },
+      {
+        label: "Quadratic Formula Exercise",
+        path: "/quadratic-formula-exercises",
+      },
+    ],
+    [{ label: "Quadratic Challenges", path: "/quadratic-challenges" }],
   ];
 
   useEffect(() => {

@@ -37,13 +37,15 @@ function QuadraticChallenges() {
           >
             <FlipCard number={1}>
               <MathJax style={{ padding: "20px" }}>
-                {"If \\(a : b = c : d\\) then \\(a / b = c / d\\)"}
+                {
+                  "If \\(a : b = c : d\\) then \\(\\frac{a}{b} = \\frac{c}{d}\\)"
+                }
               </MathJax>
             </FlipCard>
             <FlipCard number={2}>
               <MathJax style={{ padding: "20px" }}>
                 {
-                  "If \\(x ^ 2 : 3x + 5 = 1 : 2\\) then \\(x ^ 2 / (3x + 5) = 1 / 2\\) and therefore \\(2x^2 = 3x + 5\\) "
+                  "If \\(x ^ 2 : 3x + 5 = 1 : 2\\) then \\(\\frac{x ^ 2}{3x + 5} = \\frac{1}{2}\\) and therefore \\(2x^2 = 3x + 5\\) "
                 }
               </MathJax>
             </FlipCard>
@@ -65,7 +67,7 @@ function QuadraticChallenges() {
             <FlipCard number={1}>
               <MathJax style={{ padding: "10px" }}>
                 {
-                  "Try finding the intersection points of \\(L\\) and \\(C\\) and show that the resulting equation has a repeated root. An equation has a repeated root if it's of the form \\((x - a)^2 = 0\\)"
+                  "Try finding the intersection points of \\(L\\) and \\(C\\) and show that the resulting equation has a discriminant of zero."
                 }
               </MathJax>
             </FlipCard>
@@ -75,7 +77,7 @@ function QuadraticChallenges() {
               </MathJax>
               <MathJax style={{ padding: "10px", paddingTop: "0px" }}>
                 {
-                  "Now eliminate the variable \\(y\\) by setting \\(x^2 +3x -3 = mx + c\\) and find the roots!"
+                  "Now eliminate the variable \\(y\\) by setting \\(x^2 +3x -3 = mx + c\\) and find the discriminant of this quadratic!"
                 }
               </MathJax>
             </FlipCard>
@@ -83,7 +85,7 @@ function QuadraticChallenges() {
           <NextButton
             style={{ marginTop: "40px" }}
             label={"Next"}
-            path={"/quadratic-formula"}
+            path={"/"}
           ></NextButton>
         </div>
       </div>

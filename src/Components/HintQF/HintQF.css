@@ -1,0 +1,9 @@
+.show-hint {
+  color: #c5c6c7;
+  transition-property: color;
+  transition-duration: 400ms;
+}
+
+.hide-hint {
+  color: transparent;
+}

@@ -11,6 +11,8 @@ import QuadraticExerciseTwo from "./Pages/QuadraticExerciseTwo/QuadraticExercise
 import RootsLesson from "./Pages/RootsLesson/RootsLesson";
 import QuadraticChallenges from "./Pages/QuadraticChallenges/QuadraticChallenges";
 import QuadraticFormula from "./Pages/QuadraticFormula/QuadraticFormula";
+import Discriminant from "./Pages/Discriminant/Discriminant";
+import QuadraticFormulaExercises from "./Pages/QuadraticFormulaExercises/QuadraticFormulaExercises";
 
 const config = {
   loader: { load: ["[tex]/html"] },
@@ -58,6 +60,11 @@ function App() {
             <Route
               path="/quadratic-formula"
               element={<QuadraticFormula />}
+            ></Route>
+            <Route path="/discriminant" element={<Discriminant />}></Route>
+            <Route
+              path={"/quadratic-formula-exercises"}
+              element={<QuadraticFormulaExercises />}
             ></Route>
           </Routes>
         </ShowSideBarPovider>
